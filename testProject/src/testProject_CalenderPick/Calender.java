@@ -1,6 +1,6 @@
 package testProject_CalenderPick;
 
-public class Calender {
+public class replaceString {
 	
 	public static void main(String[] args) {
 	
