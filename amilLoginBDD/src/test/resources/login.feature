@@ -1,7 +1,7 @@
 @all
 @smoke
 
-Feature: Testing login amil freight
+Feature: Test login amil freight
 @First
 Scenario: Amil login with valid and invalid data
 Given User is on login page
