@@ -26,6 +26,7 @@ public class Utils {
 			properties.load(getClass().getResourceAsStream("/config.properties"));
 		} catch (IOException e) {
 			e.printStackTrace();
+			//test
 		}
 		constants.BROWSER	        = properties.getProperty("Browser");
 		constants.URL               = properties.getProperty("Url");
