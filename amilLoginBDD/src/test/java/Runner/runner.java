@@ -9,7 +9,8 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(features="src/test/resources",glue="StepDefinitions",
 dryRun = false,
 monochrome = true,
-tags = " @smoke and @test",
-plugin = {"pretty","html:target/cucumber-reports/result.html","junit:target/cucumber-reports/junitresult.xml"})
+tags = "@Smoke",
+plugin = {"pretty","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" })
 public class runner {
 }
+//"html:target/cucumber-reports/result.html","junit:target/cucumber-reports/junitresult.xml"

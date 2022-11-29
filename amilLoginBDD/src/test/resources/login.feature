@@ -1,12 +1,11 @@
-@all
-@smoke
 
+@Smoke
 Feature: Test login amil freight
 @First
 Scenario: Amil login with valid and invalid data
 Given User is on login page
 When user enters below login credentials
-|Username|Password|
+
 |Superuser1A|Admin@12345|
 |superuser1B|Admin@123|
 |superuse|Admin@12345|

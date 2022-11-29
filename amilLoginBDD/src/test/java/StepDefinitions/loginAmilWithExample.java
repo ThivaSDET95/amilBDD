@@ -19,46 +19,38 @@ import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class loginAmilWithExample {
-//	 WebDriver driver;
-	
+WebDriver driver;
 	@Given("User is on amil login page")
 	public void user_is_on_amil_login_page() {
+		DriverManager.getDriver().get(constants.URL);
 		
-				DriverManager.getDriver().get(constants.URL);
-//		System.setProperty("webdriver.chrome.driver", "C:\\Users\\thiva\\Downloads\\chromedriver_win32 (2)\\chromedriver.exe");
-//		driver=new ChromeDriver();
-//		driver.manage().window().maximize();
-//		driver.get("https://test-portal.amilfreight.com/signin");	
 	}
+
 	@When("user enters below login credentials Username {string} Password {string}")
 	public void user_enters_below_login_credentials_username_password(String uName, String pWord) throws Exception {
 		try {
-						DriverManager.getDriver().findElement(By.id("txtusername")).sendKeys(uName);
-//			driver.findElement(By.id("txtusername")).sendKeys(uName);
+			DriverManager.getDriver().findElement(By.id("txtusername")).sendKeys(uName);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		try {
-						DriverManager.getDriver().findElement(By.id("txtpassword")).sendKeys(pWord);
-//			driver.findElement(By.id("txtpassword")).sendKeys(pWord);
+			DriverManager.getDriver().findElement(By.id("txtpassword")).sendKeys(pWord);
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		//		try {
-		//			DriverManager.driver.findElement(By.id("btnSignIn")).click();
-		//		} catch (Exception e) {
-		//			e.printStackTrace();
-		//		}
 	}
+
 	@And("user clicks login button")
 	public void user_clicks_login_button() {
-				DriverManager.getDriver().findElement(By.id("btnSignIn")).click();
-//		driver.findElement(By.id("btnSignIn")).click();
+		DriverManager.getDriver().findElement(By.id("btnSignIn")).click();
+
 	}
 	@Then("close the broswer")
 	public void close_the_broswer()  {
 		System.out.println("will tearDown");
-		DriverManager.getDriver().quit();
+		//		DriverManager.getDriver().quit();
+		
 
 	}
 

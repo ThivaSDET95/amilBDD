@@ -14,17 +14,23 @@ public class DriverManager {
 
 	private static WebDriver driver;
 
-	public static WebDriver getDriver() {
+//	public static void setDriver(WebDriver WebDriver) {
+//		if (driver==null) {
+//			driver=WebDriver;
+//		}
+//	}
 
+	public static WebDriver getDriver() {
 		return driver;
 	}
-	
+
 	public static void launchBrowser() {
 		switch (constants.BROWSER) {
 		case "chrome":
 			WebDriverManager.chromedriver().setup();
 			driver=new ChromeDriver();
 			driver.manage().window().maximize();
+			driver.manage().deleteAllCookies();
 			break;
 		case "Firefox":
 			WebDriverManager.firefoxdriver().setup();
